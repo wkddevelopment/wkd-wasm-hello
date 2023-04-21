@@ -2,12 +2,10 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
-    pub fn wkdfunc(s: &str);
+    pub fn alert(s: &str);
 }
 
 #[wasm_bindgen]
-pub fn wkdfunc(zeichenfolge: &str) -> r {
-    let mut r = String::new();
-    r = &zeichenfolge;
-    return r
+pub fn greet(name: &str) {
+    alert(&format!("Hello, {}!", name));
 }
